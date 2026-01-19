@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+.works 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-wrapper 
+{
+  width: calc(300px * 3 + 30px * 2);
+  overflow: hidden;
+}
+
+.carousel 
+{
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.item 
+{
+  width: 300px;
+  flex: 0 0 auto;
+  margin-right: 30px;
+  transition: transform 0.3s;
+}
+
+
+
+/* 矢印ボタン */
+.arrow 
+{
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow:hover 
+{
+  opacity: 0.6;
+}
+
+
+.work-btn 
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.work-btn img 
+{
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* クリック感 */
+.work-btn:hover img 
+{
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.work-btn:focus-visible 
+{
+  outline: 3px solid #66aaff;
+}
+
+
+/* ===== モーダル全体 ===== */
+.modal 
+{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.modal.show 
+{
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 背景 */
+.modal-bg 
+{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* 中身 */
+.modal-content 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 24px;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+.close 
+{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#modalText img
+{
+   width: 100%;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+
+.media 
+{
+  margin: 16px 0;
+}
+
+/* 共通 */
+.media img,
+.media video,
+.media iframe 
+{
+  width: 100%;
+  border-radius: 8px;
+  display: none;
+}
+
+/* 動画比率維持（YouTube） */
+.media iframe 
+{
+  aspect-ratio: 16 / 9;
+  border: none;
+}

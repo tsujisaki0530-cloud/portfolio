@@ -1,0 +1,34 @@
+@charset "UTF-8";
+body
+{
+    margin: 0;
+	background-color: white;
+}
+
+
+.topic
+{
+    padding-top: 50px;
+    margin:0px 50px;
+    font-size:  40px;
+    /* color:rgb(232, 74, 135); */
+    color:rgb(253,210,43);
+}
+
+.line
+{
+    margin: 0px 50px;
+    height: 5px;
+    border: none;
+    background-color: rgb(253,210,43);
+    /* margin: 20px;
+    font-size:  30px;
+    color: rgb(232, 74, 135); */
+}
+
+
+.modal-text-template 
+{
+    display: none;
+}
+

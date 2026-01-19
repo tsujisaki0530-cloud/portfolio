@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/works.css">
+
+</head>
+
+
+
+<body>
+    <!-- タイトル -->
+    <h1>
+        <div id="title_box">
+            <p id="name_box">TSUJI SAKI</p>
+            <p>portfolio</p>
+        </div>
+    </h1>
+
+    <!-- プロフィール -->
+    <div class="topic">About Me</div>
+    <div class="line"> </div>
+
+    <section class="aboutme_area">
+
+        <div class="tab_buttons">
+            <button class="tab active" data-tab="profile">プロフィール</button>
+            <button class="tab" data-tab="skill">スキル</button>
+            <!-- <button class="tab" data-tab="works">Works</button> -->
+        </div>
+        <br>
+
+        <div class="aboutme_box">
+            <div class="tab_content active" id="profile">
+                 <img src="image\profile2.png">
+                <!-- <div class="profile_list">
+                    <div class="profile_row">
+                        <div class="profile_topic">名前</div>
+                        <div class="profile_value">辻 紗希</div>
+                    </div>
+
+                    <div class="profile_row">
+                        <div class="profile_topic">所属</div>
+                        <div class="profile_value">HAL東京 ゲーム4年制学科 ゲーム制作コース</div>
+                    </div>
+
+                    <div class="profile_row">
+                        <div class="profile_topic">趣味</div>
+                        <div class="profile_value">ホラー映画鑑賞、お絵描き</div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="tab_content" id="skill">
+                <div class="profile_topic">言語</div>
+                <div>
+                    ・C++(2年半)<br>
+                    ・C#(2年半)<br>
+                    ・HTML(1ヶ月)<br>
+                    ・Java(1ヶ月)<br>
+                    ・JavaScript(1ヶ月)<br>
+                    ・SQL(1ヶ月)
+                </div>
+                <br>
+                <div class="profile_topic">ツール</div>
+                <div>
+                    ・Unity(2年半)<br>
+                    ・UnrealEngine(2年半)
+                </div>
+            </div>
+
+            <!-- <div class="tab_content" id="works">
+                <p>制作物準備中</p>
+            </div> -->
+        </div>
+
+    </section>
+
+    <!-- 作品 -->
+    <div class="topic">Works</div>
+    <div class="line"> </div>
+    <br>
+
+    <section class="works">
+        <button class="arrow left" id="prev">＜</button>
+
+        <div class="carousel-wrapper">
+            <div class="carousel" id="carousel">
+                <div class="item">
+                    <button class="work-btn" data-id="1">
+                        <img src="image\mochiAniTitle.png" alt="作品1">
+                    </button>
+                </div>
+                <div class="item">
+                    <button class="work-btn" data-id="2">
+                        <img src="image\Onigiri_Normal.png" alt="作品2">
+                    </button>
+                </div>
+                <div class="item">
+                    <button class="work-btn" data-id="3">
+                        <img src="image\Onigiri_Normal.png" alt="作品3">
+                    </button>
+                </div>
+                <div class="item">
+                    <button class="work-btn" data-id="4">
+                        <img src="image\Onigiri_Normal.png" alt="作品4">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button class="arrow right" id="next">＞</button>
+    </section>
+
+
+    <!--モーダル用 作品説明テキスト（非表示 -->
+    <div class="modal-text-template" id="work-text-1">
+        <img src="image\mochiAniTitle.png">
+        <p>DirectXで制作したペット育成ゲーム。</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="modal-text-template" id="work-text-2">
+        <p>Unityで制作した2Dパズルゲーム。</p>
+        <p>UIと演出に力を入れました。</p>
+    </div>
+
+    <div class="modal-text-template" id="work-text-3">
+        <p>作品3の説明文。</p>
+    </div>
+
+    <div class="modal-text-template" id="work-text-4">
+        <p>作品4の説明文。</p>
+    </div>
+
+    <!-- 作品用モーダル -->
+    <div class="modal" id="modal">
+        <div class="modal-bg" id="modalBg"></div>
+
+        <div class="modal-content">
+            <button class="close" id="closeModal">×</button>
+            <h2 id="modalTitle"></h2>
+
+            <!-- メディア表示 -->
+            <div class="media">
+                <img id="modalImage" alt="">
+                <video id="modalVideo" controls></video>
+                <iframe id="modalYoutube" allowfullscreen></iframe>
+            </div>
+
+            <div id="modalText"></div>
+        </div>
+    </div>
+
+
+    <script src="js/profile.js"></script>
+    <script src="js/works.js"></script>
+</body>
+
+</html>

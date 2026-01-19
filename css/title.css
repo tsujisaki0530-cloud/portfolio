@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Comic+Relief');
+
+h1
+{
+    position: relative; 
+    margin: 0;
+    padding: 100px 0;
+    text-align: center;
+    font-size:  60px;       /* 文字サイズ指定 */
+    font-family: 'Comic Relief', serif;    /* フォントの種類指定 */
+    background-color: rgb(253,210,43);
+}
+
+#name_box
+{
+    width: auto; 
+    padding: 5px 40px; 
+    font-size:  20px;       /* 文字サイズ指定 */
+    font-family: 'Comic Relief', serif;    /* フォントの種類指定 */
+    color: rgb(225, 69, 103);
+    background-color: rgb(199, 232, 248);
+}
+
+#title_box 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ← 完全中央 */
+    width: 97%;
+    height: auto;        
+    padding: 20px 0;    
+
+    display: flex; 
+    flex-direction: column;             
+    justify-content: center;
+    align-items: center;
+    color: rgb(225, 69, 103);
+
+    border: 5px solid rgb(225, 69, 103);
+    background-color: rgb(253,210,43);
+    text-align: center;
+}
+
+#title_box p 
+{
+    margin: 0;
+}
+
+
